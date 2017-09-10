@@ -1,6 +1,6 @@
 const router = require('express').Router()
 const sequelize = require('../db.js')
-const User = sequelize.import('../models/user.js')
+const User = sequelize.import('../Models/user.js')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 

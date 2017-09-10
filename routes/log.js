@@ -1,8 +1,8 @@
 let router = require('express').Router()
 let sequelize = require('../db.js')
-let Log = sequelize.import('../models/log.js')
-let User = sequelize.import('../models/user.js')
-let Definition = sequelize.import('../models/definition.js')
+let Log = sequelize.import('../Models/log.js')
+let User = sequelize.import('../Models/user.js')
+let Definition = sequelize.import('../Models/definition.js')
 
 router.post('/', function(req,res) {
 	let description = req.body.log.desc

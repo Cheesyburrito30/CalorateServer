@@ -1,6 +1,6 @@
 let jwt = require('jsonwebtoken')
 let sequelize = require('../db.js')
-let User = sequelize.import('../models/user.js')
+let User = sequelize.import('../Models/user.js')
 
 module.exports = function(req, res, next){
 	let sessionToken = req.headers.authorization

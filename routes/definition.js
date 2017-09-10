@@ -1,7 +1,7 @@
 var router = require('express').Router();
 var sequelize = require('../db.js');
-var User = sequelize.import('../models/user.js');
-var Definition = sequelize.import('../models/definition.js');
+var User = sequelize.import('../Models/user.js');
+var Definition = sequelize.import('../Models/definition.js');
 
 router.post('/', function(req, res) {
 	//variables

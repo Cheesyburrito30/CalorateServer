@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const sequelize = require('./db.js')
 const pg = require('pg')
 
+pg.defaults.ssl = true
 pg.connect(process.env.DATABASE_URL, function(err, client, done){
 	console.log(err)
 	client.query('SELECT*FROM users', function(err, result){

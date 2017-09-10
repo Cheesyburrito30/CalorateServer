@@ -4,19 +4,6 @@ const app = express()
 const http = require('http').Server(app)
 const bodyParser = require('body-parser')
 const sequelize = require('./db.js')
-const pg = require('pg')
-
-pg.defaults.ssl = true
-app.get('./db', function (req, res){
-	pg.connect(process.env.DATABASE_URL, function(err, client, done){
-		console.log(err)
-		client.query('SELECT*FROM users', function(err, result){
-			done()
-			if(err) return console.error(err)
-				console.log(result)
-		})
-	})
-})
 
 //create table
 

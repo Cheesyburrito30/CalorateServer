@@ -26,17 +26,17 @@ router.post('/', function(req,res) {
 			}
 		)
 })
-router.get('/', function(req,res) {
+router.get('/', function(req, res) {
 	let userid = req.user.id
 	Log
 	.findAll({
-		where: {owner: userid}
+		where: { owner: userid }
 	})
 	.then(
-		function findAllSuccess(data){
+		function findAllSuccess(data) {
 			res.json(data)
 		},
-		function findAllError(err){
+		function findAllError(err) {
 			res.send(500, err.message)
 		}
 	)

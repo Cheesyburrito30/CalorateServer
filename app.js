@@ -7,7 +7,7 @@ const sequelize = require('./db.js')
 const Log = sequelize.import('./Models/log.js')
 //create table
 
-Log.sync({force: true}) //this drops table should we need to
+//Log.sync({force: true}) //this drops table should we need to
 sequelize.sync()
 
 app.use(bodyParser.json())//will parse code and then turn it into JSON

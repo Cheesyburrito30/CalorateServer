@@ -27,7 +27,7 @@ router.post('/', function(req,res) {
 		)
 })
 router.get('/', function(req,res) {
-	let userid = req.res.id
+	let userid = req.user.id
 	Log
 	.findAll({
 		where: {owner: userid}

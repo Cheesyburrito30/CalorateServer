@@ -8,7 +8,7 @@ const Log = sequelize.import('./Models/log.js')
 //create table
 
 //Log.sync({force: true}) //this drops table should we need to
-sequelize.sync()
+sequelize.sync({force: true})
 
 app.use(bodyParser.json())//will parse code and then turn it into JSON
 

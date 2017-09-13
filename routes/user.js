@@ -19,8 +19,8 @@ router.post('/', function(req,res){
 		email: email,
 		age: userAge,
 		height: height,
-		startWeight: startWeight,
-		goalWeight: goalWeight,
+		startweight: startWeight,
+		goalweight: goalWeight,
 		gender: userGender
 	}).then(
 	//Sequelize is going to return the object it created from DB

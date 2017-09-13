@@ -5,12 +5,23 @@ const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
 
 router.post('/', function(req,res){
-	let username= req.body.user.username;
-	let pass = req.body.user.password;
+	let username= req.body.user.username
+	let pass = req.body.user.password
+	let startWeight = req.body.user.startWeight
+	let goalWeight = req.body.user.goalWeight
+	let userGender =req.body.user.gender
+	let email = req.body.user.email
+	let userAge = req.body.user.age
 	//Need to create User object and use sequelize to put it into the DB
 	User.create({
 		username: username,
-		passwordhash: bcrypt.hashSync(pass,10)
+		passwordhash: bcrypt.hashSync(pass,10),
+		email: email,
+		age: userAge,
+		height: height,
+		startWeight: startWeight,
+		goalWeight: goalWeight,
+		gender: userGender
 	}).then(
 	//Sequelize is going to return the object it created from DB
 		function createSuccess(user){
@@ -22,7 +33,7 @@ router.post('/', function(req,res){
 			})
 		},
 		function createError(err) {
-			res.send(500, err.message)
+			res.status(500).send(message)
 		}
 	)
 

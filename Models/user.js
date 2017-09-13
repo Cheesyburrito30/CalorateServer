@@ -5,9 +5,10 @@ module.exports = function(sequelize, DataTypes){
 		username:DataTypes.STRING,
 		passwordhash:DataTypes.STRING,
 		email:DataTypes.STRING,
-		gender:DataTypes.STRING,
+		age:DataTypes.INTEGER,
 		height:DataTypes.INTEGER,
 		startWeight:DataTypes.INTEGER,
-		goalWeight:DataTypes.INTEGER
+		goalWeight:DataTypes.INTEGER,
+		gender:DataTypes.STRING,
 	})
 }

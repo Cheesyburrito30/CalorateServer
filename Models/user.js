@@ -10,5 +10,6 @@ module.exports = function(sequelize, DataTypes){
 		startweight:DataTypes.INTEGER,
 		goalweight:DataTypes.INTEGER,
 		gender:DataTypes.STRING
+	},{
 	})
 }

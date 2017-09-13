@@ -12,6 +12,7 @@ router.post('/', function(req,res){
 	let userGender =req.body.user.gender
 	let email = req.body.user.email
 	let userAge = req.body.user.age
+	let height = req.body.user.height
 	//Need to create User object and use sequelize to put it into the DB
 	User.create({
 		username: username,

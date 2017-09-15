@@ -8,6 +8,8 @@ module.exports = function(sequelize, DataTypes){
 		age:DataTypes.INTEGER,
 		height:DataTypes.INTEGER,
 		startweight:DataTypes.INTEGER,
+		BMI:DataTypes.INTEGER,
+		REE:DataTypes.INTEGER,
 		goalweight:DataTypes.INTEGER,
 		gender:DataTypes.STRING
 	},{

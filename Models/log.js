@@ -1,9 +1,13 @@
 module.exports = function(sequelize, DataTypes) {
 	return sequelize.define('log', {
-		description: DataTypes.STRING,
-		result: DataTypes.STRING,
-		owner: DataTypes.INTEGER,
-		def: DataTypes.STRING
+		owner:DataTypes.INTEGER,
+		name: DataTypes.STRING,
+		type: DataTypes.STRING,
+		calories: DataTypes.INTEGER,
+		protein: DataTypes.INTEGER,
+		fat: DataTypes.INTEGER,
+		carbs: DataTypes.INTEGER,
+		servings: DataTypes.INTEGER
 	},{
 	})
 }

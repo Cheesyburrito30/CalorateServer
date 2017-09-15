@@ -5,17 +5,24 @@ let User = sequelize.import('../Models/user.js')
 let Definition = sequelize.import('../Models/definition.js')
 
 router.post('/', function(req,res) {
-	let description = req.body.log.desc
-	let result = req.body.log.result
-	let user = req.user
-	let definition= req.body.log.def
-
+		let name = req.body.log.name
+		let type = req.body.log.type
+		let cals = req.body.log.calories
+		let protein = req.body.log.protein
+		let fat = req.body.log.fat
+		let carbs = req.body.log.carbs
+		let servings = req.body.log.servings
+		let user = req.user
 	Log
 		.create({
-			description: description,
-			result:result,
 			owner: user.id,
-			def: definition
+			name: name,
+			type: type,
+			calories: cals,
+			protein: protein,
+			fat: fat,
+			carbs: carbs,
+			servings: servings			
 		})
 		.then(
 			function createSuccess(log) {

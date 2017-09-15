@@ -7,12 +7,14 @@ const jwt = require('jsonwebtoken')
 router.post('/', function(req,res){
 	let username= req.body.user.username
 	let pass = req.body.user.password
-	let startWeight = req.body.user.startWeight
-	let goalWeight = req.body.user.goalWeight
+	let startWeight = req.body.user.startweight
+	let goalWeight = req.body.user.goalweight
 	let userGender =req.body.user.gender
 	let email = req.body.user.email
 	let userAge = req.body.user.age
 	let height = req.body.user.height
+	let BMI = req.body.user.BMI
+	let REE = req.body.user.REE
 	//Need to create User object and use sequelize to put it into the DB
 	User.create({
 		username: username,
@@ -21,6 +23,8 @@ router.post('/', function(req,res){
 		age: userAge,
 		height: height,
 		startweight: startWeight,
+		BMI: BMI,
+		REE: REE,
 		goalweight: goalWeight,
 		gender: userGender
 	}).then(
@@ -34,7 +38,7 @@ router.post('/', function(req,res){
 			})
 		},
 		function createError(err) {
-			res.status(500).send(message)
+			res.send(500, err.message)
 		}
 	)
 
